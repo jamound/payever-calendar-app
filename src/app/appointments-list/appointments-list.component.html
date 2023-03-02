@@ -1,0 +1,6 @@
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let appointment of appointments" cdkDrag>
+        <label>{{ appointment.title }}</label>
+        <label>{{ appointment.startDate | date:'shortTime' }} - {{ appointment.endDate | date:'shortTime' }}</label>
+    </div>
+</div>
